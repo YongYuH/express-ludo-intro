@@ -46,11 +46,6 @@ $(document).ready(function() {
     });
 });
 
-$('.users-num').ready(function() {
-    // Modify user number
-    $('.users-num').text(completedUsers.toString());
-});
-
 function onScroll(event){
     var scrollPos = $(document).scrollTop() + headerHeight;
     $('.side-nav a').each(function () {

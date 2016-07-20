@@ -214,6 +214,15 @@ body {
 /* line 41, ../sass/components/_side-nav.scss */
 .side-nav a:hover, .side-nav a.active {
   background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.2) translateY();
+  -ms-transform: scale(1.2) translateY();
+  -moz-transform: scale(1.2) translateY();
+  -webkit-transform: scale(1.2) translateY();
+  -o-transform: scale(1.2) translateY();
+  transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
 }
 
 /* end of side-nav */
@@ -259,7 +268,7 @@ body {
 
 /* line 38, ../sass/components/_join.scss */
 .join-button {
-  width: 112px;
+  width: 120px;
   height: 40px;
   border: solid;
   border-color: #0a3f70;
