@@ -121,18 +121,23 @@ table {
 }
 
 /* line 39, ../sass/helpers/_placeholders.scss */
-.join-text, .introduction-text, .game-text, .social-text, .expert-text, .desktop-form-text, .mobile-form-text {
+.welcome-text, .introduction-text-title, .game-text .core-text-title, .social-text .core-text-title, .expert-text .core-text-title {
   font-weight: bold;
 }
 
 /* line 40, ../sass/helpers/_placeholders.scss */
+.users-text .users-num-before, .users-text .users-num-after {
+  font-weight: 300;
+}
+
+/* line 41, ../sass/helpers/_placeholders.scss */
 .welcome-text, .game-text .core-text-title, .social-text .core-text-title, .expert-text .core-text-title {
-  font-family: 'EXO 2';
+  font-family: 'Microsoft JhengHei', 'EXO 2';
 }
 
 /* line 3, ../sass/helpers/_default.scss */
 body {
-  font-family: Exo;
+  font-family: "Microsoft JhengHei", "Exo";
 }
 
 /* header bar */
@@ -199,7 +204,7 @@ body {
   margin-left: -2px;
   width: 5px;
   height: 5px;
-  background-color: rgba(65, 180, 230, 0.8);
+  background-color: #cfd8dc;
   border-radius: 100%;
   position: absolute;
   top: 50%;
@@ -225,18 +230,18 @@ body {
   line-height: 1.2;
 }
 
-/* line 18, ../sass/components/_join.scss */
+/* line 17, ../sass/components/_join.scss */
 .welcome-text {
   margin-top: 64px;
 }
 @media screen and (min-width: 992px) {
-  /* line 18, ../sass/components/_join.scss */
+  /* line 17, ../sass/components/_join.scss */
   .welcome-text {
     font-size: 48px;
   }
 }
 @media screen and (max-width: 992px) {
-  /* line 18, ../sass/components/_join.scss */
+  /* line 17, ../sass/components/_join.scss */
   .welcome-text {
     font-size: 38px;
   }
@@ -246,15 +251,15 @@ body {
 .users-text {
   font-size: 24px;
 }
-/* line 30, ../sass/components/_join.scss */
+/* line 33, ../sass/components/_join.scss */
 .users-text .users-num {
   line-height: 1.3;
   font-size: 100px;
 }
 
-/* line 35, ../sass/components/_join.scss */
+/* line 38, ../sass/components/_join.scss */
 .join-button {
-  width: 96px;
+  width: 112px;
   height: 40px;
   border: solid;
   border-color: #0a3f70;
@@ -263,7 +268,7 @@ body {
   font-size: 24px;
 }
 
-/* line 51, ../sass/components/_join.scss */
+/* line 50, ../sass/components/_join.scss */
 .join-button.btn {
   line-height: 1;
   color: white;
@@ -273,7 +278,7 @@ body {
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
 }
-/* line 58, ../sass/components/_join.scss */
+/* line 57, ../sass/components/_join.scss */
 .join-button.btn:hover {
   color: #0a3f70;
   background-color: white;
@@ -283,7 +288,7 @@ body {
   -o-transition-duration: 0.2s;
 }
 
-/* line 64, ../sass/components/_join.scss */
+/* line 63, ../sass/components/_join.scss */
 .join-img {
   float: right;
   background-image: url("../images/join.png");
@@ -298,7 +303,7 @@ body {
   line-height: 1.2;
 }
 
-/* line 18, ../sass/components/_introduction.scss */
+/* line 17, ../sass/components/_introduction.scss */
 .introduction-text-title {
   padding-bottom: 20px;
   font-size: 30px;
@@ -307,18 +312,18 @@ body {
 
 /* line 23, ../sass/components/_introduction.scss */
 .introduction-text-content {
-  color: #b4b4b4;
+  color: #333333;
 }
 @media screen and (min-width: 992px) {
   /* line 23, ../sass/components/_introduction.scss */
   .introduction-text-content {
-    font-size: 30px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   /* line 23, ../sass/components/_introduction.scss */
   .introduction-text-content {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -346,7 +351,7 @@ body {
   margin-bottom: 30px;
   line-height: 1.3;
 }
-/* line 26, ../sass/components/_core.scss */
+/* line 25, ../sass/components/_core.scss */
 .game-text .core-text-title, .social-text .core-text-title, .expert-text .core-text-title {
   font-size: 36px;
   padding-bottom: 20px;
@@ -358,13 +363,13 @@ body {
 @media screen and (min-width: 992px) {
   /* line 31, ../sass/components/_core.scss */
   .game-text .core-text-content, .social-text .core-text-content, .expert-text .core-text-content {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   /* line 31, ../sass/components/_core.scss */
   .game-text .core-text-content, .social-text .core-text-content, .expert-text .core-text-content {
-    font-size: 21px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -424,7 +429,7 @@ body {
 @media screen and (min-width: 768px) {
   /* line 14, ../sass/components/_form.scss */
   .desktop-form-text, .mobile-form-text {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -433,18 +438,18 @@ body {
     font-size: 18px;
   }
 }
-/* line 26, ../sass/components/_form.scss */
+/* line 25, ../sass/components/_form.scss */
 .desktop-form-text .fill_in, .mobile-form-text .fill_in {
   color: white;
 }
 
-/* line 30, ../sass/components/_form.scss */
+/* line 29, ../sass/components/_form.scss */
 .arrows-div {
   width: 60px;
   height: 70px;
 }
 
-/* line 40, ../sass/components/_form.scss */
+/* line 39, ../sass/components/_form.scss */
 .arrows {
   width: 60px;
   height: 70px;
@@ -453,7 +458,7 @@ body {
   margin-left: -30px;
 }
 
-/* line 48, ../sass/components/_form.scss */
+/* line 47, ../sass/components/_form.scss */
 .arrows path {
   stroke: white;
   fill: transparent;
@@ -490,21 +495,21 @@ body {
     opacity: 0;
   }
 }
-/* line 72, ../sass/components/_form.scss */
+/* line 71, ../sass/components/_form.scss */
 .arrows path.a1 {
   animation-delay: -1s;
   -webkit-animation-delay: -1s;
   /* Safari and Chrome */
 }
 
-/* line 77, ../sass/components/_form.scss */
+/* line 76, ../sass/components/_form.scss */
 .arrows path.a2 {
   animation-delay: -0.5s;
   -webkit-animation-delay: -0.5s;
   /* Safari and Chrome */
 }
 
-/* line 82, ../sass/components/_form.scss */
+/* line 81, ../sass/components/_form.scss */
 .arrows path.a3 {
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
