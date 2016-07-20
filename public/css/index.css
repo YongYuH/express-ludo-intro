@@ -160,13 +160,14 @@ body {
 
 /* line 23, ../sass/components/_header.scss */
 .header-logo {
+  background-image: url("../images/Ludo_logo_shadow.png");
   background-image: url("../images/Ludo_logo.png");
   transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
 }
-/* line 29, ../sass/components/_header.scss */
+/* line 30, ../sass/components/_header.scss */
 .header-logo:hover {
   background-image: url("../images/Ludo_logo_shadow.png");
   transition-duration: 0.2s;
