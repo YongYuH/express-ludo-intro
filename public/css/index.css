@@ -1,0 +1,567 @@
+/* reset of css */
+/* line 2, ../sass/helpers/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 23, ../sass/helpers/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 27, ../sass/helpers/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 30, ../sass/helpers/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 33, ../sass/helpers/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 36, ../sass/helpers/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 41, ../sass/helpers/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* end of reset of css */
+/* line 4, ../sass/helpers/_placeholders.scss */
+.header, .side-nav {
+  position: fixed;
+}
+
+/* line 5, ../sass/helpers/_placeholders.scss */
+.side-nav .side-nav-button {
+  position: absolute;
+}
+
+/* line 6, ../sass/helpers/_placeholders.scss */
+.header-logo-div, .header-logo, .join, .join-img, .introduction, .core, .game-text, .social-text, .expert-text, .game-img, .social-img, .expert-img, .form, .contact-us {
+  position: relative;
+}
+
+/* line 9, ../sass/helpers/_placeholders.scss */
+.header, .join, .introduction, .core, .form {
+  width: 100%;
+}
+
+/* line 11, ../sass/helpers/_placeholders.scss */
+.header-logo-div, .header-logo, .join-img, .game, .social, .expert {
+  height: 100%;
+}
+
+/* line 12, ../sass/helpers/_placeholders.scss */
+.typeform-div {
+  height: 50%;
+}
+
+/* line 15, ../sass/helpers/_placeholders.scss */
+.side-nav, .join, .introduction, .core, .form {
+  top: 93px;
+}
+
+/* line 18, ../sass/helpers/_placeholders.scss */
+.header-logo-div, .arrows-div {
+  margin: 0 auto;
+}
+
+/* line 24, ../sass/helpers/_placeholders.scss */
+.introduction-text, .desktop-form-text, .mobile-form-text, .typeform-div {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* line 30, ../sass/helpers/_placeholders.scss */
+.header-logo, .join-img, .game-img, .social-img, .expert-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* line 37, ../sass/helpers/_placeholders.scss */
+.side-nav, .join-text, .join-button, .introduction, .core, .form, .contact-us {
+  text-align: center;
+}
+
+/* line 38, ../sass/helpers/_placeholders.scss */
+.join-button {
+  text-decoration: none;
+}
+
+/* line 39, ../sass/helpers/_placeholders.scss */
+.join-text, .introduction-text, .game-text, .social-text, .expert-text, .desktop-form-text, .mobile-form-text {
+  font-weight: bold;
+}
+
+/* line 40, ../sass/helpers/_placeholders.scss */
+.welcome-text, .game-text .core-text-title, .social-text .core-text-title, .expert-text .core-text-title {
+  font-family: 'EXO 2';
+}
+
+/* line 3, ../sass/helpers/_default.scss */
+body {
+  font-family: Exo;
+}
+
+/* header bar */
+/* line 5, ../sass/components/_header.scss */
+.header {
+  top: 0;
+  z-index: 5;
+  height: 93px;
+  background-color: white;
+  border-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: whitesmoke;
+  box-shadow: 0 1px 5px #505050;
+}
+
+/* line 17, ../sass/components/_header.scss */
+.header-logo-div {
+  width: 250px;
+}
+
+/* line 23, ../sass/components/_header.scss */
+.header-logo {
+  background-image: url("../images/Ludo_logo.png");
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+/* line 29, ../sass/components/_header.scss */
+.header-logo:hover {
+  background-image: url("../images/Ludo_logo_shadow.png");
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+
+/* end of header bar */
+/* side-nav */
+/* line 5, ../sass/components/_side-nav.scss */
+.side-nav {
+  height: 100%;
+  width: 20px;
+  z-index: 2;
+}
+/* line 13, ../sass/components/_side-nav.scss */
+.side-nav .side-nav-button {
+  top: 33%;
+}
+/* line 18, ../sass/components/_side-nav.scss */
+.side-nav a {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 10px 8px;
+  border: 6px solid transparent;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+/* line 28, ../sass/components/_side-nav.scss */
+.side-nav a:before {
+  margin-top: -2px;
+  margin-left: -2px;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(65, 180, 230, 0.8);
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+}
+/* line 41, ../sass/components/_side-nav.scss */
+.side-nav a:hover, .side-nav a.active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* end of side-nav */
+/* join */
+/* line 5, ../sass/components/_join.scss */
+.join {
+  height: 560px;
+  background-color: #0e579b;
+  color: white;
+}
+
+/* line 13, ../sass/components/_join.scss */
+.join-text {
+  line-height: 1.2;
+}
+
+/* line 18, ../sass/components/_join.scss */
+.welcome-text {
+  margin-top: 64px;
+}
+@media screen and (min-width: 992px) {
+  /* line 18, ../sass/components/_join.scss */
+  .welcome-text {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 18, ../sass/components/_join.scss */
+  .welcome-text {
+    font-size: 38px;
+  }
+}
+
+/* line 28, ../sass/components/_join.scss */
+.users-text {
+  font-size: 24px;
+}
+/* line 30, ../sass/components/_join.scss */
+.users-text .users-num {
+  line-height: 1.3;
+  font-size: 100px;
+}
+
+/* line 35, ../sass/components/_join.scss */
+.join-button {
+  width: 96px;
+  height: 40px;
+  border: solid;
+  border-color: #0a3f70;
+  border-width: 1px;
+  padding: 8px;
+  font-size: 24px;
+}
+
+/* line 51, ../sass/components/_join.scss */
+.join-button.btn {
+  line-height: 1;
+  color: white;
+  background-color: #0a3f70;
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+/* line 58, ../sass/components/_join.scss */
+.join-button.btn:hover {
+  color: #0a3f70;
+  background-color: white;
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+
+/* line 64, ../sass/components/_join.scss */
+.join-img {
+  float: right;
+  background-image: url("../images/join.png");
+}
+
+/* end of join */
+/* introduction */
+/* line 11, ../sass/components/_introduction.scss */
+.introduction-text {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  line-height: 1.2;
+}
+
+/* line 18, ../sass/components/_introduction.scss */
+.introduction-text-title {
+  padding-bottom: 20px;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 23, ../sass/components/_introduction.scss */
+.introduction-text-content {
+  color: #b4b4b4;
+}
+@media screen and (min-width: 992px) {
+  /* line 23, ../sass/components/_introduction.scss */
+  .introduction-text-content {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* line 23, ../sass/components/_introduction.scss */
+  .introduction-text-content {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 23, ../sass/components/_introduction.scss */
+  .introduction-text-content {
+    font-size: 18px;
+  }
+}
+
+/* end of introduction */
+/* core */
+/* line 5, ../sass/components/_core.scss */
+.core {
+  background-color: #ff9300;
+  color: white;
+}
+
+/* line 13, ../sass/components/_core.scss */
+.core.row {
+  margin: 0;
+}
+
+/* line 20, ../sass/components/_core.scss */
+.game-text, .social-text, .expert-text {
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+/* line 26, ../sass/components/_core.scss */
+.game-text .core-text-title, .social-text .core-text-title, .expert-text .core-text-title {
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+/* line 31, ../sass/components/_core.scss */
+.game-text .core-text-content, .social-text .core-text-content, .expert-text .core-text-content {
+  padding-bottom: 6px;
+}
+@media screen and (min-width: 992px) {
+  /* line 31, ../sass/components/_core.scss */
+  .game-text .core-text-content, .social-text .core-text-content, .expert-text .core-text-content {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* line 31, ../sass/components/_core.scss */
+  .game-text .core-text-content, .social-text .core-text-content, .expert-text .core-text-content {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 31, ../sass/components/_core.scss */
+  .game-text .core-text-content, .social-text .core-text-content, .expert-text .core-text-content {
+    font-size: 18px;
+  }
+}
+
+/* line 44, ../sass/components/_core.scss */
+.game-img, .social-img, .expert-img {
+  height: 200px;
+}
+@media screen and (min-width: 768px) {
+  /* line 44, ../sass/components/_core.scss */
+  .game-img, .social-img, .expert-img {
+    background-size: 35%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 44, ../sass/components/_core.scss */
+  .game-img, .social-img, .expert-img {
+    background-size: 30%;
+  }
+}
+
+/* line 55, ../sass/components/_core.scss */
+.game-img {
+  background-image: url("../images/game.png");
+}
+
+/* line 56, ../sass/components/_core.scss */
+.social-img {
+  background-image: url("../images/social.png");
+}
+
+/* line 57, ../sass/components/_core.scss */
+.expert-img {
+  background-image: url("../images/expert.png");
+}
+
+/* end of core */
+/* form */
+/* line 5, ../sass/components/_form.scss */
+.form {
+  height: 750px;
+  background-color: #fbc02c;
+  color: whitesmoke;
+}
+
+/* line 14, ../sass/components/_form.scss */
+.desktop-form-text, .mobile-form-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  line-height: 1.3;
+}
+@media screen and (min-width: 768px) {
+  /* line 14, ../sass/components/_form.scss */
+  .desktop-form-text, .mobile-form-text {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 14, ../sass/components/_form.scss */
+  .desktop-form-text, .mobile-form-text {
+    font-size: 18px;
+  }
+}
+/* line 26, ../sass/components/_form.scss */
+.desktop-form-text .fill_in, .mobile-form-text .fill_in {
+  color: white;
+}
+
+/* line 30, ../sass/components/_form.scss */
+.arrows-div {
+  width: 60px;
+  height: 70px;
+}
+
+/* line 40, ../sass/components/_form.scss */
+.arrows {
+  width: 60px;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+}
+
+/* line 48, ../sass/components/_form.scss */
+.arrows path {
+  stroke: white;
+  fill: transparent;
+  stroke-width: 1px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 72, ../sass/components/_form.scss */
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  /* Safari and Chrome */
+}
+
+/* line 77, ../sass/components/_form.scss */
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  /* Safari and Chrome */
+}
+
+/* line 82, ../sass/components/_form.scss */
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  /* Safari and Chrome */
+}
+
+/* end of form */
+/* contact-us */
+/* line 5, ../sass/components/_contact-us.scss */
+.contact-us {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #cfd8dc;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 13, ../sass/components/_contact-us.scss */
+.contact-us-title {
+  line-height: 1.8;
+  font-size: 30px;
+}
+
+/* line 18, ../sass/components/_contact-us.scss */
+.contact-us-img img {
+  height: 60px;
+  transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+/* line 23, ../sass/components/_contact-us.scss */
+.contact-us-img img:hover {
+  transform: scale(1.2) translateY(-10px);
+  -ms-transform: scale(1.2) translateY(-10px);
+  -moz-transform: scale(1.2) translateY(-10px);
+  -webkit-transform: scale(1.2) translateY(-10px);
+  -o-transform: scale(1.2) translateY(-10px);
+  transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+
+/* line 29, ../sass/components/_contact-us.scss */
+.copyright {
+  padding-top: 20px;
+  color: #b4b4b4;
+}
+@media screen and (max-width: 768px) {
+  /* line 29, ../sass/components/_contact-us.scss */
+  .copyright {
+    font-size: 14px;
+  }
+}
+
+/* end of contact-us*/
