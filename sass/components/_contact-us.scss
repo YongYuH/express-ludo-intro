@@ -1,0 +1,34 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/placeholders";
+/* contact-us */
+.contact-us {
+    @extend %relative;
+    @extend %text_center;
+    padding-top: $contact-us_padding_y;
+    padding-bottom: $contact-us_padding_y;
+    background-color: $gray;
+    color: $black;
+}
+    .contact-us-title {
+        line-height: $contact-us-content_line-height;
+        font-size: $contact-us_text_font-size;
+    }
+    .contact-us-img {
+        img {
+            height: $contact-us-img_height;
+            @include transition-timing-function(ease-in);
+            @include transition-duration(0.1s);
+
+            &:hover {
+                @include transform(1.1, -10px);
+                @include transition-duration(0.1s);
+            }
+        }
+    }
+    .copyright {
+        padding-top: $copyright_padding-top;
+        color: $deep_gray;
+        font-size: $copyright_font-size;
+    }
+/* end of contact-us*/

@@ -1,0 +1,85 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/placeholders";
+/* form */
+.form {
+    @extend %relative;
+    @extend %header_height_offset;
+    height: $form_page_height;
+    @extend %as_wide_as_parent;
+    @extend %text_center;
+    background-color: $orange;
+    color: $smoke_white;
+}
+    .desktop-form-text, .mobile-form-text {
+        @extend %padding_x;
+        padding-top: $form-text_padding_y;
+        padding-bottom: $form-text_padding_y;
+        line-height: $form-text_line-height;
+        @media screen and (min-width: $bt_xs_width) {
+            font-size: $form-text_font-size_desktop;
+        }
+        @media screen and (max-width: $bt_xs_width) {
+            font-size: $form-text_font-size_mobile;
+        }
+        .fill_in {
+            color: white;
+        }
+    }
+    .arrows-div {
+        width: 60px;
+        height: 70px;
+        @extend %margin_center_x;
+    }
+    .typeform-div {
+        @extend %half_height_of_parent;
+        @extend %padding_x;
+    }
+
+    .arrows {
+        width: 60px;
+        height: 70px;
+        position: absolute;
+        left: 50%;
+        margin-left: -30px;
+    }
+
+    .arrows path {
+        stroke: white;
+        fill: transparent;
+        stroke-width: 1px;  
+        animation: arrow 2s infinite;
+        -webkit-animation: arrow 2s infinite; 
+    }
+
+    @keyframes arrow
+    {
+        0% {opacity:0}
+        40% {opacity:1}
+        80% {opacity:0}
+        100% {opacity:0}
+    }
+
+    @-webkit-keyframes arrow /*Safari and Chrome*/
+    {
+        0% {opacity:0}
+        40% {opacity:1}
+        80% {opacity:0}
+        100% {opacity:0}
+    }
+
+    .arrows path.a1 {
+        animation-delay:-1s;
+        -webkit-animation-delay:-1s; /* Safari and Chrome */
+    }
+
+    .arrows path.a2 {
+        animation-delay:-0.5s;
+        -webkit-animation-delay:-0.5s; /* Safari and Chrome */
+    }
+
+    .arrows path.a3 {   
+        animation-delay:0s;
+        -webkit-animation-delay:0s; /* Safari and Chrome */
+    }
+/* end of form */
