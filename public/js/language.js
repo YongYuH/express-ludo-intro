@@ -19,7 +19,7 @@ var html_text_object = {
         "contact-us-title": "Contact Us",
         "facebook": '<a href="https://www.facebook.com/LUDO-Now-1155062761203764/?fref=ts" target="_blank"><img src="./images/facebook.png" alt="facebook"/></a>',
         "twitter": '<a href="https://grouptweet.com/LUDO_Now/33a69f55c49ba6310b08007c532ab9cb" target="_blank"><img src="./images/twitter.png" alt="twitter"/></a>',
-        "email": '<a href="mailto:ludonow.com@gmail.com" target="_blank"><img src="./images/email.png" alt="email"/></a>',
+        "email": '<a href="mailto:contact@ludonow.com" target="_blank"><img src="./images/email.png" alt="email"/></a>',
         "copyright": "© 2016 LUDONOW.COM ALL RIGHTS RESERVED"
     },    
     "zh-hk": {
@@ -42,7 +42,7 @@ var html_text_object = {
         "contact-us-title": "聯絡我們",
         "facebook": '<a href="https://www.facebook.com/ludonow/?fref=ts" target="_blank"><img src="./images/facebook.png" alt="facebook"/></a>',
         "twitter": '<a href="https://grouptweet.com/LUDO_Now/33a69f55c49ba6310b08007c532ab9cb" target="_blank"><img src="./images/twitter.png" alt="twitter"/></a>',
-        "email": '<a href="mailto:ludonow.com@gmail.com" target="_blank"><img src="./images/email.png" alt="email"/></a>',
+        "email": '<a href="mailto:contact@ludonow.com" target="_blank"><img src="./images/email.png" alt="email"/></a>',
         "copyright": "© 2016 LUDONOW.COM ALL RIGHTS RESERVED"
     },
     "zh-tw": {
@@ -65,7 +65,7 @@ var html_text_object = {
         "contact-us-title": "聯絡我們",
         "facebook": '<a href="https://www.facebook.com/ludonow/?fref=ts" target="_blank"><img src="./images/facebook.png" alt="facebook"/></a>',
         "twitter": '<a href="https://grouptweet.com/LUDO_Now/33a69f55c49ba6310b08007c532ab9cb" target="_blank"><img src="./images/twitter.png" alt="twitter"/></a>',
-        "email": '<a href="mailto:ludonow.com@gmail.com" target="_blank"><img src="./images/email.png" alt="email"/></a>',
+        "email": '<a href="mailto:contact@ludonow.com" target="_blank"><img src="./images/email.png" alt="email"/></a>',
         "copyright": "© 2016 LUDONOW.COM ALL RIGHTS RESERVED"
     }
 }
