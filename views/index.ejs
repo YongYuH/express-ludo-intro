@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="google-site-verification" content="DXbItR27yg9XqeALDAMAMxva4_9Ovbva2qVceIUPrXM" />
-    <meta property="og:title" content="Ludo"/>
-    <meta property="og:url" content="http://www.ludonow.com/"/>
-    <meta property="og:site_name" content="Ludo Now"/>
-    <meta property="og:image" content="images/join.png"/>
-    <meta name="og:description" content="Ludo is a free web service make your life fun and productive. People can redefine the problem they face daily and get feedback when they finish their work">
+    <title>Ludo Introduction</title>
+    <meta charset="utf-8">
     <meta name="description" content="Ludo is a free web service make your life fun and productive. People can redefine the problem they face daily and get feedback when they finish their work">
+    <meta name="google-site-verification" content="DXbItR27yg9XqeALDAMAMxva4_9Ovbva2qVceIUPrXM">
+    <!-- FACEBOOK START -->
+    <meta property="fb:app_id" content="1055399861180084">
+    <meta property="og:title" content="Ludo">
+    <meta property="og:url" content="http://www.ludonow.com/">
+    <meta property="og:site_name" content="Ludo Now">
+    <meta property="og:image" content="images/join.png">
+    <!-- FACEBOOK END -->
+    <!-- TWITTER START -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@LUDO_Now">
+    <!-- TWITTER END -->
+    <link rel="canonical" href="http://intro.ludonow.com/">
     <link rel="shortcut icon" href="./images/favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./css/bootstrap-3.3.6.min.css">
     <link rel="stylesheet" href="./css/index.css">
-    <title>Ludo Introduction</title>
 </head>
 <body id="body">
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1055399861180084',
+          xfbml      : true,
+          version    : 'v2.7'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
     <header class="header">
         <a href="" class="page-scroll-top">
             <div class="header-logo-div">
@@ -115,6 +139,7 @@
             <span class="email"></span>
         </div>
         <div class="copyright"></div>
+        <a href=""><div class="language-switch"><div class="language-switch-arrow"></div></div></a>
     </section>
     <script src="./js/jquery-2.1.4.min.js"></script>
     <script src="./js/bootstrap-3.3.6.min.js"></script>
@@ -130,6 +155,7 @@
       ga('create', 'UA-81145940-1', 'auto');
       ga('send', 'pageview');
     </script>
+
 </body>
 
 </html>
