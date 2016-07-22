@@ -12,19 +12,31 @@
         @extend %padding_x;
         padding: $introduction_padding_y;
         line-height: $introduction-text_line-height;
-
         img {
             width: 60%;
             @extend %margin_center_x;
         }
-        a {
+        .prev-button, .next-button {
             @extend %absolute;
             top: 50%;
+            width: 23px;
+            height: 23px;
+            @extend %round_border;
+            &:hover {
+                color: white;
+                background-color: $dark_gray;
+            }
+            &:active {
+                color: white;
+                background-color: $dark_gray;
+            }
         }
-        a.prev-button {
+        .prev-button {
+            @extend %clickable;
             left: 160px;
         }
-        a.next-button {
+        .next-button {
+            @extend %clickable;
             right: 160px;
         }
     }

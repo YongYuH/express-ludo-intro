@@ -63,7 +63,7 @@ table {
 }
 
 /* line 5, ../../sass/helpers/_placeholders.scss */
-.side-nav .side-nav-buttons, .side-nav .side-nav-button-center, .introduction-slides a, .language-switch, .language-switch-button, .language-switch-arrow {
+.side-nav .side-nav-buttons, .side-nav .side-nav-button-center, .introduction-slides .prev-button, .introduction-slides .next-button, .language-switch, .language-switch-button, .language-switch-arrow {
   position: absolute;
 }
 
@@ -108,7 +108,7 @@ table {
 }
 
 /* line 26, ../../sass/helpers/_placeholders.scss */
-.side-nav .side-nav-button, .side-nav .side-nav-button-center {
+.side-nav .side-nav-button, .side-nav .side-nav-button-center, .introduction-slides .prev-button, .introduction-slides .next-button {
   border-radius: 50%;
 }
 
@@ -151,7 +151,7 @@ table {
 }
 
 /* line 50, ../../sass/helpers/_placeholders.scss */
-.language-switch-button:hover, .language {
+.introduction-slides .prev-button, .introduction-slides .next-button, .language-switch-button:hover, .language {
   cursor: pointer;
 }
 
@@ -329,24 +329,36 @@ body {
   padding: 40px;
   line-height: 1.2;
 }
-/* line 16, ../../sass/layout/_introduction.scss */
+/* line 15, ../../sass/layout/_introduction.scss */
 .introduction-slides img {
   width: 60%;
 }
-/* line 20, ../../sass/layout/_introduction.scss */
-.introduction-slides a {
+/* line 19, ../../sass/layout/_introduction.scss */
+.introduction-slides .prev-button, .introduction-slides .next-button {
   top: 50%;
+  width: 23px;
+  height: 23px;
 }
-/* line 24, ../../sass/layout/_introduction.scss */
-.introduction-slides a.prev-button {
+/* line 25, ../../sass/layout/_introduction.scss */
+.introduction-slides .prev-button:hover, .introduction-slides .next-button:hover {
+  color: white;
+  background-color: #505050;
+}
+/* line 29, ../../sass/layout/_introduction.scss */
+.introduction-slides .prev-button:active, .introduction-slides .next-button:active {
+  color: white;
+  background-color: #505050;
+}
+/* line 34, ../../sass/layout/_introduction.scss */
+.introduction-slides .prev-button {
   left: 160px;
 }
-/* line 27, ../../sass/layout/_introduction.scss */
-.introduction-slides a.next-button {
+/* line 38, ../../sass/layout/_introduction.scss */
+.introduction-slides .next-button {
   right: 160px;
 }
 
-/* line 31, ../../sass/layout/_introduction.scss */
+/* line 43, ../../sass/layout/_introduction.scss */
 .introduction-title {
   padding-bottom: 20px;
   font-size: 30px;
