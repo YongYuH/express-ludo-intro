@@ -1,42 +1,43 @@
 @import "helpers/mixins";
 @import "helpers/variables";
 @import "helpers/placeholders";
-/* introduction */
+
 .introduction {
     @extend %relative;
     @extend %header_height_offset;
     @extend %as_wide_as_parent;
     @extend %text_center;
 }
-    .introduction-slides {
+    .introduction-content {
         @extend %padding_x;
         padding: $introduction_padding_y;
         line-height: $introduction-text_line-height;
-        img {
-            width: 60%;
-            @extend %margin_center_x;
-        }
         .prev-button, .next-button {
+            @extend %clickable;
             @extend %absolute;
-            top: 50%;
-            width: 23px;
-            height: 23px;
+            top: 46%;
+            width: 100px;
+            height: 100px;
             @extend %round_border;
-            &:hover {
-                color: white;
-                background-color: $dark_gray;
+            @extend %text_center;
+            font-size: 75px;
+            border: 3px solid #fff;
+            transition: 0.1s;
+            transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
+            @media screen and (max-width: $bt_md_width) {
+                display: none;
             }
-            &:active {
-                color: white;
-                background-color: $dark_gray;
+            &:hover {
+                border: 3px solid #505050;
+                transform: scale(1.11);
+                transition: 0.3s;
+                transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
             }
         }
         .prev-button {
-            @extend %clickable;
             left: 160px;
         }
         .next-button {
-            @extend %clickable;
             right: 160px;
         }
     }
@@ -46,20 +47,8 @@
             font-size: $introduction-text-title_font-size;
             color: $black;
         }
-    // .introduction-text {
-    //     @extend %padding_x;
-    //     padding-top: $introduction_padding_y;
-    //     padding-bottom: $introduction_padding_y;
-    //     line-height: $introduction-text_line-height;
-    // }
-    //     .introduction-text-title {
-    //         padding-bottom: $introduction-text-title_padding-bottom;
-    //         @extend %bold_font;
-    //         font-size: $introduction-text-title_font-size;
-    //         color: $black;
-    //     }
-    //     .introduction-text-content {
-    //         color: $light-black;
-    //         font-size: $introduction-text-content_font-size;
-    //     }
-/* end of introduction */
+        img.introduction-slide {
+            width: 60%;
+            
+            @extend %margin_center_x;
+        }

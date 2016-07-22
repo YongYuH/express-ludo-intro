@@ -1,7 +1,7 @@
 @import "helpers/mixins";
 @import "helpers/variables";
 @import "helpers/placeholders";
-/* side-nav */
+
 .side-nav {
     @extend %fixed;
     @extend %header_height_offset;
@@ -38,4 +38,3 @@
             @include transition-duration(0.5s);
         }
 }
-/* end of side-nav */

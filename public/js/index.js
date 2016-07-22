@@ -6,15 +6,17 @@ var relang = lang.toLowerCase();
 
 // introduction slide
 var slideIndex = 1;
-showDivs(slideIndex);
+
+var isSlideUp = false;
 
 $(document).ready(function() {
     // language detect and render corresponding language
     renderLanguageText(relang);
-    // animation
+
+    // side nav bar scroll animation invoke
     $(document).on("scroll", onScroll);
 
-    // Join us link to form animation
+    // Join us button link to form animation
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -27,9 +29,9 @@ $(document).ready(function() {
             }
         }
     });
-
     
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
+
+    // Ludo logo move to top animation
     $('a.page-scroll-top').bind('click', function(event) {
         $('html, body').stop(true, false).animate({
             scrollTop: 0
@@ -37,6 +39,7 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
+    // side nav bar click animation
     $('a.page-scroll').bind('click', function(event) {
         $('a.page-scroll').removeClass("active");
         $(this).addClass("active");
@@ -48,15 +51,42 @@ $(document).ready(function() {
         }, 800, 'easeOutCubic');
         event.preventDefault();
     });
+
+    // initialize the slide 
+    initialSlides();
+
+    var myElement = document.getElementById('introduction-slides');
+    // create a simple instance
+    // by default, it only adds horizontal recognizers
+    var mc = new Hammer(myElement);
+
+    // listen to events...
+    mc.on("panleft", function(ev) {
+        plusDivs(1);
+    });
+    mc.on("panright", function(ev) {
+        plusDivs(-1);
+    });
 });
 
+function initialSlides() {
+    $(".introduction-slide").hide();
+    $(".introduction-slide").eq(0).show();
+    $('.prev-button').hide();
+    slideIndex = 1;
+}
+
+// introduction slide animation
 function plusDivs(n) {
     showDivs(slideIndex += n);
 }
-
+// introduction slide animation
 function showDivs(n) {
     var i;
     var slides = $(".introduction-slide");
+    var screen_width = screen.width;
+    size_of_slides = $(".introduction-slides").length;
+    var cur_slide;
     var prev = $('.prev-button');
     var next = $('.next-button');
     if (n >= slides.length) { 
@@ -66,13 +96,15 @@ function showDivs(n) {
         prev.hide();
         slideIndex = 1;
     } else {
-        prev.show();
-        next.show();
+        if (screen_width > 768) {
+            prev.show();
+            next.show();
+        }
     }
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides.hide();
     }
-    slides[slideIndex - 1].style.display = "block";
+    slides.eq(slideIndex - 1).css("display", "block");
 }
 
 // language-switch-button dropup animation
@@ -81,6 +113,7 @@ $('.language-switch-button').bind('click', function(event) {
     $('.language-switch-content').toggleClass('hidden');
 });
 
+// language switch click animation
 $('.language').bind('click', function(event) {
     var chosen_language = $(this).attr("value");
     renderLanguageText(chosen_language);
@@ -89,15 +122,17 @@ $('.language').bind('click', function(event) {
     $('html, body').stop(true, false).animate({
         scrollTop: 0
     }, 500, 'easeOutCubic');
+    initialSlides();
 });
 
-function onScroll(event){
+// side nav bar scroll animation
+function onScroll(event) {
     var scrollPos = $(document).scrollTop() + headerHeight;
-    $('.side-nav a').each(function () {
+    $('.side-nav-buttons a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('side-nav a').removeClass("active");
+            $('side-nav-buttons a').removeClass("active");
             currLink.addClass("active");
         }
         else {

@@ -7,6 +7,12 @@
     height: $language-switch_height;
     right: $language-switch_offset_right;
     margin-top: $language-switch_margin-top;
+    @media screen and (max-width: $bt_xs_width) {
+        left: 0;
+        right: 0;
+        bottom: 27px;
+        margin: auto;
+    }
 }
     .language-switch-button {
         @extend %absolute;
@@ -22,6 +28,7 @@
         &:active {
             box-shadow: inset 0.5px 0.5px 0.5px $dark_gray;
         }
+
     }
         .language-switch-arrow {
             @extend %absolute;
@@ -30,9 +37,18 @@
             width: $language-switch-arrow_width;
             height: $language-switch-arrow_height;
             @extend %background_img_setting;
-            @include background_img_content(up_arrow);
             @include transition-timing-function(cubic-bezier(0.3, -0.3, 0.6, 1.8));
             @include transition-duration(0.5s);
+        }
+        .arrows {
+            width: 35px;
+            height: 25px;
+            margin-left: -8px;
+        }
+        .arrows path {
+            stroke: white;
+            fill: transparent;
+            stroke-width: 1px;  
         }
         .language-switch-content {
             @extend %as_wide_as_parent;
@@ -52,7 +68,7 @@
             @include transition-duration(0.5s);
         }
         .language-switch-button.clicked + .language-switch-content {
-            @include translateY(-2*16px);
+            @include translateY(-98%);
         }
             .language {
                 @extend %clickable;
