@@ -89,10 +89,26 @@
         <div class="join-img col-sm-6 hidden-xs"></div>
     </section>
     <section id="introduction" class="introduction">
-        <div class="introduction-text">
+        <div class="introduction-slides">
+            <div class="introduction-title"></div>
+            <img class="mySlides" src="./images/introduction1.png">
+            <img class="mySlides" src="./images/introduction2.png">
+            <img class="mySlides" src="./images/introduction3.png">
+            <img class="mySlides" src="./images/introduction4.png">
+            <img class="mySlides" src="./images/introduction5.png">
+            <img class="mySlides" src="./images/introduction6.png">
+            <img class="mySlides" src="./images/introduction7.png">
+            <img class="mySlides" src="./images/introduction8.png">
+            <img class="mySlides" src="./images/introduction9.png">
+            <img class="mySlides" src="./images/introduction10.png">
+
+            <a class="prev-button" onclick="plusDivs(-1)">❮</a>
+            <a class="next-button" onclick="plusDivs(1)">❯</a>
+        </div>
+<!--         <div class="introduction-text">
             <div class="introduction-text-title"></div>
             <div class="introduction-text-content"></div>
-        </div>
+        </div> -->
     </section>
     <section id="core" class="core row">
         <div class="game col-sm-4">
@@ -139,7 +155,15 @@
             <span class="email"></span>
         </div>
         <div class="copyright"></div>
-        <a href=""><div class="language-switch"><div class="language-switch-arrow"></div></div></a>
+        <div class="language-switch">
+            <div class="language-switch-button">
+                <div class="language-switch-arrow"></div>
+            </div>
+            <div class="language-switch-content hidden">
+                <div class="language" value="en-us">English</div>
+                <div class="language" value="zh-tw">中文</div>
+            </div>
+        </div>
     </section>
     <script src="./js/jquery-2.1.4.min.js"></script>
     <script src="./js/bootstrap-3.3.6.min.js"></script>

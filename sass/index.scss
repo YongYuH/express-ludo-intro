@@ -1,10 +1,10 @@
 @import "helpers/reset";
 @import "helpers/default";
 
-@import "components/header";
-@import "components/side-nav";
-@import "components/join";
-@import "components/introduction";
-@import "components/core";  
-@import "components/form";
-@import "components/contact-us";
+@import "layout/header";
+@import "layout/side-nav";
+@import "layout/join";
+@import "layout/introduction";
+@import "layout/core";  
+@import "layout/form";
+@import "layout/contact-us";

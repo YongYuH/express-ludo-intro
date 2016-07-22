@@ -4,8 +4,7 @@ var html_text_object = {
         "users-num-before": "THERE ARE<br>",
         "users-num-after": "<br>PEOPLE PLAY WITH US",
         "join-button": "Join Us",
-        "introduction-text-title": "What is Ludo",
-        "introduction-text-content": "Ludo is a free web service let your life fun and productive.<br>People can redefine the problem they face daily and get feedback<br>when they finish their work.",
+        "introduction-title": "Why we need Ludo",
         "game-text-title": "GAME",
         "game-text-content": "Simple interface<br>including<br>report, game ,and time,<br>you can start easy<br>like play video GAME.",
         "social-text-title": "SOCIAL",
@@ -20,15 +19,14 @@ var html_text_object = {
         "facebook": '<a href="https://www.facebook.com/LUDO-Now-1155062761203764/?fref=ts" target="_blank"><img src="./images/facebook.png" alt="facebook"/></a>',
         "twitter": '<a href="https://grouptweet.com/LUDO_Now/33a69f55c49ba6310b08007c532ab9cb" target="_blank"><img src="./images/twitter.png" alt="twitter"/></a>',
         "email": '<a href="mailto:contact@ludonow.com" target="_blank"><img src="./images/email.png" alt="email"/></a>',
-        "copyright": "© 2016 LUDONOW.COM ALL RIGHTS RESERVED"
+        "copyright": "© 2016 LUDONOW.COM ALL RIGHTS RESERVED",
     },    
     "zh-hk": {
         "welcome-text": "<br>和全世界的人一起成長",
         "users-num-before": "<br>簡單填寫<span class=\"english\">Email</span><br>與",
         "users-num-after": "人<br>一起成長",
         "join-button": "加入我們",
-        "introduction-text-title": "什麼是<span class=\"english\">Ludo</span>",
-        "introduction-text-content": "<span class=\"english\">Ludo</span>是一個免費的網頁服務，我們希望人們生活中的大小事<br>都可以透過<span class=\"english\">Ludo</span>被重新定義並且直接回饋到每個人身上",
+        "introduction-title": "為什麼我們需要<span class=\"english\">Ludo</span>",
         "game-text-title": "遊戲",
         "game-text-content": "簡單的操作方式<br>由一段時間內<br>的互相激勵，<br>讓你輕鬆養成習慣。",
         "social-text-title": "社交",
@@ -43,15 +41,14 @@ var html_text_object = {
         "facebook": '<a href="https://www.facebook.com/ludonow/?fref=ts" target="_blank"><img src="./images/facebook.png" alt="facebook"/></a>',
         "twitter": '<a href="https://grouptweet.com/LUDO_Now/33a69f55c49ba6310b08007c532ab9cb" target="_blank"><img src="./images/twitter.png" alt="twitter"/></a>',
         "email": '<a href="mailto:contact@ludonow.com" target="_blank"><img src="./images/email.png" alt="email"/></a>',
-        "copyright": "© 2016 LUDONOW.COM ALL RIGHTS RESERVED"
+        "copyright": "© 2016 LUDONOW.COM ALL RIGHTS RESERVED",
     },
     "zh-tw": {
         "welcome-text": "<br>和全世界的人一起成長",
         "users-num-before": "<br>簡單填寫<span class=\"english\">Email</span><br>與",
         "users-num-after": "人<br>一起成長",
         "join-button": "加入我們",
-        "introduction-text-title": "什麼是<span class=\"english\">Ludo</span>",
-        "introduction-text-content": "<span class=\"english\">Ludo</span>是一個免費的網頁服務，我們希望人們生活中的大小事<br>都可以透過<span class=\"english\">Ludo</span>被重新定義並且直接回饋到每個人身上",
+        "introduction-title": "為什麼我們需要<span class=\"english\">Ludo</span>",
         "game-text-title": "遊戲",
         "game-text-content": "簡單的操作方式<br>由一段時間內<br>的互相激勵，<br>讓你輕鬆養成習慣。",
         "social-text-title": "社交",
@@ -66,7 +63,7 @@ var html_text_object = {
         "facebook": '<a href="https://www.facebook.com/ludonow/?fref=ts" target="_blank"><img src="./images/facebook.png" alt="facebook"/></a>',
         "twitter": '<a href="https://grouptweet.com/LUDO_Now/33a69f55c49ba6310b08007c532ab9cb" target="_blank"><img src="./images/twitter.png" alt="twitter"/></a>',
         "email": '<a href="mailto:contact@ludonow.com" target="_blank"><img src="./images/email.png" alt="email"/></a>',
-        "copyright": "© 2016 LUDONOW.COM ALL RIGHTS RESERVED"
+        "copyright": "© 2016 LUDONOW.COM ALL RIGHTS RESERVED",
     }
 }
 
@@ -76,3 +73,4 @@ function renderLanguageText(language) {
         $("." + className).html(content);
     });
 }
+

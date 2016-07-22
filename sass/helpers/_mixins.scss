@@ -36,3 +36,18 @@
     -o-transform: scale($scale) translateY(#{$translateY});
 }
 
+@mixin translateY($translateY) {
+    transform: translateY($translateY);
+    -ms-transform: translateY($translateY);
+    -moz-transform: translateY($translateY);
+    -webkit-transform: translateY($translateY);
+    -o-transform: translateY($translateY);
+}
+
+@mixin rotateX($Xdeg) {
+    transform: rotateX($Xdeg);
+    -ms-transform: rotateX($Xdeg);
+    -moz-transform: rotateX($Xdeg);
+    -webkit-transform: rotateX($Xdeg);
+    -o-transform: rotateX($Xdeg);
+}

@@ -1,0 +1,53 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/placeholders";
+/* introduction */
+.introduction {
+    @extend %relative;
+    @extend %header_height_offset;
+    @extend %as_wide_as_parent;
+    @extend %text_center;
+}
+    .introduction-slides {
+        @extend %padding_x;
+        padding: $introduction_padding_y;
+        line-height: $introduction-text_line-height;
+
+        img {
+            width: 60%;
+            @extend %margin_center_x;
+        }
+        a {
+            @extend %absolute;
+            top: 50%;
+        }
+        a.prev-button {
+            left: 160px;
+        }
+        a.next-button {
+            right: 160px;
+        }
+    }
+        .introduction-title {
+            padding-bottom: $introduction-text-title_padding-bottom;
+            @extend %bold_font;
+            font-size: $introduction-text-title_font-size;
+            color: $black;
+        }
+    // .introduction-text {
+    //     @extend %padding_x;
+    //     padding-top: $introduction_padding_y;
+    //     padding-bottom: $introduction_padding_y;
+    //     line-height: $introduction-text_line-height;
+    // }
+    //     .introduction-text-title {
+    //         padding-bottom: $introduction-text-title_padding-bottom;
+    //         @extend %bold_font;
+    //         font-size: $introduction-text-title_font-size;
+    //         color: $black;
+    //     }
+    //     .introduction-text-content {
+    //         color: $light-black;
+    //         font-size: $introduction-text-content_font-size;
+    //     }
+/* end of introduction */

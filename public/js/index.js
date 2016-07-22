@@ -4,6 +4,10 @@ var completedUsers = 10;
 var lang = window.navigator.userLanguage || window.navigator.language ;     
 var relang = lang.toLowerCase();
 
+// introduction slide
+var slideIndex = 1;
+showDivs(slideIndex);
+
 $(document).ready(function() {
     // language detect and render corresponding language
     renderLanguageText(relang);
@@ -44,6 +48,47 @@ $(document).ready(function() {
         }, 800, 'easeOutCubic');
         event.preventDefault();
     });
+});
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var slides = $(".mySlides");
+    var prev = $('.prev-button');
+    var next = $('.next-button');
+    if (n >= slides.length) { 
+        next.hide();
+        slideIndex = slides.length;
+    } else if (n <= 1) { 
+        prev.hide();
+        slideIndex = 1;
+    } else {
+        prev.show();
+        next.show();
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+// language-switch-button dropup animation
+$('.language-switch-button').bind('click', function(event) {
+    $(this).toggleClass('clicked');
+    $('.language-switch-content').toggleClass('hidden');
+});
+
+$('.language').bind('click', function(event) {
+    var chosen_language = $(this).attr("value");
+    renderLanguageText(chosen_language);
+    $('.language-switch-button').toggleClass('clicked');
+    $('.language-switch-content').toggleClass('hidden');
+    $('html, body').stop(true, false).animate({
+        scrollTop: 0
+    }, 500, 'easeOutCubic');
 });
 
 function onScroll(event){
