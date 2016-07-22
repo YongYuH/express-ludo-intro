@@ -56,7 +56,7 @@ function plusDivs(n) {
 
 function showDivs(n) {
     var i;
-    var slides = $(".mySlides");
+    var slides = $(".introduction-slide");
     var prev = $('.prev-button');
     var next = $('.next-button');
     if (n >= slides.length) { 
