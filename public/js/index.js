@@ -51,7 +51,7 @@ $(document).ready(function() {
     // initialize the slide 
     initialSlides();
     // mobile pan event handler on slide
-    panSlides();
+    swipeSlides();
     $('.left-button').bind('click', function(event) {
         plusDivs(-1);
     });
@@ -100,18 +100,18 @@ function showDivs(n) {
     }
     slides.eq(slideIndex - 1).css("display", "block");
 }
-// mobile pan event handler on slide
-function panSlides() {
+// mobile swipe event handler on slide
+function swipeSlides() {
     var myElement = document.getElementById('introduction-slides');
     // create a simple instance
     // by default, it only adds horizontal recognizers
     var mc = new Hammer(myElement);
 
     // listen to events...
-    mc.on("panleft", function(ev) {
+    mc.on("swipeleft", function(ev) {
         plusDivs(1);
     });
-    mc.on("panright", function(ev) {
+    mc.on("swiperight", function(ev) {
         plusDivs(-1);
     });
 }
