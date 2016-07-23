@@ -63,7 +63,7 @@ table {
 }
 
 /* line 5, ../../sass/helpers/_placeholders.scss */
-.side-nav .side-nav-buttons, .side-nav .side-nav-button-center, .introduction-content .prev-button, .introduction-content .next-button, .language-switch, .language-switch-button, .language-switch-arrow {
+.side-nav .side-nav-buttons, .side-nav .side-nav-button-center, div.slides-buttons, .language-switch, .language-switch-button, .language-switch-arrow {
   position: absolute;
 }
 
@@ -108,7 +108,7 @@ table {
 }
 
 /* line 26, ../../sass/helpers/_placeholders.scss */
-.side-nav .side-nav-button, .side-nav .side-nav-button-center, .introduction-content .prev-button, .introduction-content .next-button {
+.side-nav .side-nav-button, .side-nav .side-nav-button-center, div.slides-buttons {
   border-radius: 50%;
 }
 
@@ -126,7 +126,7 @@ table {
 }
 
 /* line 42, ../../sass/helpers/_placeholders.scss */
-.side-nav, .join-text, .join-button, .introduction, .introduction-content .prev-button, .introduction-content .next-button, .core, .form, .contact-us {
+.side-nav, .join-text, .join-button, div.slides-buttons, .introduction, .core, .form, .contact-us {
   text-align: center;
 }
 
@@ -150,9 +150,26 @@ table {
   font-family: 'Microsoft JhengHei', 'EXO 2';
 }
 
-/* line 50, ../../sass/helpers/_placeholders.scss */
-.introduction-content .prev-button, .introduction-content .next-button, .language-switch-button:hover, .language {
+/* line 49, ../../sass/helpers/_placeholders.scss */
+div.slides-buttons, .language-switch-button:hover, .language {
   cursor: pointer;
+}
+
+/* line 50, ../../sass/helpers/_placeholders.scss */
+div.slides-buttons {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     not supported by any browser */
 }
 
 /* line 3, ../../sass/helpers/_default.scss */
@@ -321,13 +338,8 @@ body {
 }
 
 /* end of join */
-/* line 11, ../../sass/layout/_introduction.scss */
-.introduction-content {
-  padding: 40px;
-  line-height: 1.2;
-}
-/* line 15, ../../sass/layout/_introduction.scss */
-.introduction-content .prev-button, .introduction-content .next-button {
+/* line 5, ../../sass/components/_slides-buttons.scss */
+div.slides-buttons {
   top: 46%;
   width: 100px;
   height: 100px;
@@ -336,36 +348,44 @@ body {
   transition: 0.1s;
   transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
 }
-@media screen and (max-width: 992px) {
-  /* line 15, ../../sass/layout/_introduction.scss */
-  .introduction-content .prev-button, .introduction-content .next-button {
+@media screen and (max-width: 1020px) {
+  /* line 5, ../../sass/components/_slides-buttons.scss */
+  div.slides-buttons {
     display: none;
   }
 }
-/* line 30, ../../sass/layout/_introduction.scss */
-.introduction-content .prev-button:hover, .introduction-content .next-button:hover {
+/* line 21, ../../sass/components/_slides-buttons.scss */
+div.slides-buttons:hover {
   border: 3px solid #505050;
   transform: scale(1.11);
   transition: 0.3s;
   transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
 }
-/* line 37, ../../sass/layout/_introduction.scss */
-.introduction-content .prev-button {
+
+/* line 28, ../../sass/components/_slides-buttons.scss */
+.left-button {
   left: 160px;
 }
-/* line 40, ../../sass/layout/_introduction.scss */
-.introduction-content .next-button {
+
+/* line 31, ../../sass/components/_slides-buttons.scss */
+.right-button {
   right: 160px;
 }
 
-/* line 44, ../../sass/layout/_introduction.scss */
+/* line 13, ../../sass/layout/_introduction.scss */
+.introduction-content {
+  padding: 40px;
+  line-height: 1.2;
+}
+
+/* line 18, ../../sass/layout/_introduction.scss */
 .introduction-title {
   padding-bottom: 20px;
   font-size: 30px;
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 50, ../../sass/layout/_introduction.scss */
+/* line 24, ../../sass/layout/_introduction.scss */
 img.introduction-slide {
   width: 60%;
 }
@@ -570,21 +590,16 @@ img.introduction-slide {
 }
 
 /* line 73, ../../sass/components/_language-switch.scss */
-.transparent {
-  opacity: 0;
-}
-
-/* line 76, ../../sass/components/_language-switch.scss */
 .language {
   padding-bottom: 1.5px;
 }
-/* line 80, ../../sass/components/_language-switch.scss */
+/* line 77, ../../sass/components/_language-switch.scss */
 .language:hover {
   border-radius: 2px;
   color: #fdd479;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 85, ../../sass/components/_language-switch.scss */
+/* line 82, ../../sass/components/_language-switch.scss */
 .language:active {
   border-radius: 2px;
   box-shadow: inset 0.5px 0.5px 0.5px #fdd479;

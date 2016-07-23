@@ -1,0 +1,33 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/placeholders";
+
+div.slides-buttons {
+    @extend %clickable;
+    @extend %absolute;
+    top: 46%;
+    width: 100px;
+    height: 100px;
+    @extend %round_border;
+    @extend %text_center;
+    font-size: 75px;
+    border: 3px solid #fff;
+    transition: 0.1s;
+    transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
+    @extend %noselect;
+    @media screen and (max-width: $button_block_slides_width) {
+        display: none;
+    }
+    &:hover {
+        border: 3px solid #505050;
+        transform: scale(1.11);
+        transition: 0.3s;
+        transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
+    }
+}
+.left-button {
+    left: 160px;
+}
+.right-button {
+    right: 160px;
+}

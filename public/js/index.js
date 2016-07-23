@@ -1,20 +1,39 @@
 var headerHeight = 93;
-var completedUsers = 10;
 
+// render language
 var lang = window.navigator.userLanguage || window.navigator.language ;     
 var relang = lang.toLowerCase();
 
 // introduction slide
 var slideIndex = 1;
-
 var isSlideUp = false;
 
 $(document).ready(function() {
     // language detect and render corresponding language
     renderLanguageText(relang);
 
+    // Ludo logo move to top animation
+    $('a.page-scroll-top').bind('click', function(event) {
+        $('html, body').stop(true, false).animate({
+            scrollTop: 0
+        }, 800, 'easeOutCubic');
+        event.preventDefault();
+    });
+
     // side nav bar scroll animation invoke
     $(document).on("scroll", onScroll);
+    // side nav bar click animation
+    $('a.page-scroll').bind('click', function(event) {
+        $('a.page-scroll').removeClass("active");
+        $(this).addClass("active");
+        var $anchor = $(this);
+        var sectionPosition = $($anchor.attr('href')).offset().top;
+        var sectionPositionWithHeader = sectionPosition - headerHeight;
+        $('html, body').stop(true, false).animate({
+            scrollTop: sectionPositionWithHeader
+        }, 800, 'easeOutCubic');
+        event.preventDefault();
+    });
 
     // Join us button link to form animation
     $('a[href*=#]:not([href=#])').click(function() {
@@ -29,44 +48,23 @@ $(document).ready(function() {
             }
         }
     });
-    
-
-    // Ludo logo move to top animation
-    $('a.page-scroll-top').bind('click', function(event) {
-        $('html, body').stop(true, false).animate({
-            scrollTop: 0
-        }, 800, 'easeOutCubic');
-        event.preventDefault();
-    });
-
-    // side nav bar click animation
-    $('a.page-scroll').bind('click', function(event) {
-        $('a.page-scroll').removeClass("active");
-        $(this).addClass("active");
-        var $anchor = $(this);
-        var sectionPosition = $($anchor.attr('href')).offset().top;
-        var sectionPositionWithHeader = sectionPosition - headerHeight;
-        $('html, body').stop(true, false).animate({
-            scrollTop: sectionPositionWithHeader
-        }, 800, 'easeOutCubic');
-        event.preventDefault();
-    });
 
     // initialize the slide 
     initialSlides();
-
     // mobile pan event handler on slide
     panSlides()
 });
 
+
+
+/* slides */
 // show the first introduction slide
 function initialSlides() {
     $(".introduction-slide").hide();
     $(".introduction-slide").eq(0).show();
-    $('.prev-button').hide();
+    $('.left-button').hide();
     slideIndex = 1;
 }
-
 // introduction slide animation
 function plusDivs(n) {
     showDivs(slideIndex += n);
@@ -78,18 +76,18 @@ function showDivs(n) {
     var screen_width = screen.width;
     size_of_slides = $(".introduction-slides").length;
     var cur_slide;
-    var prev = $('.prev-button');
-    var next = $('.next-button');
+    var left = $('.left-button');
+    var right = $('.right-button');
     if (n >= slides.length) { 
-        next.hide();
+        right.hide();
         slideIndex = slides.length;
     } else if (n <= 1) { 
-        prev.hide();
+        left.hide();
         slideIndex = 1;
     } else {
         if (screen_width > 768) {
-            prev.show();
-            next.show();
+            left.show();
+            right.show();
         }
     }
     for (i = 0; i < slides.length; i++) {
@@ -97,7 +95,6 @@ function showDivs(n) {
     }
     slides.eq(slideIndex - 1).css("display", "block");
 }
-
 // mobile pan event handler on slide
 function panSlides() {
     var myElement = document.getElementById('introduction-slides');
@@ -114,6 +111,9 @@ function panSlides() {
     });
 }
 
+
+
+/* language switch */
 // language-switch-button dropup animation
 $('.language-switch-button').bind('click', function(event) {
     $(this).toggleClass('clicked');
@@ -132,6 +132,9 @@ $('.language').bind('click', function(event) {
     initialSlides();
 });
 
+
+
+/* side nav */
 // side nav bar scroll animation
 function onScroll(event) {
     var scrollPos = $(document).scrollTop() + headerHeight;
