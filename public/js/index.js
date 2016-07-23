@@ -55,20 +55,11 @@ $(document).ready(function() {
     // initialize the slide 
     initialSlides();
 
-    var myElement = document.getElementById('introduction-slides');
-    // create a simple instance
-    // by default, it only adds horizontal recognizers
-    var mc = new Hammer(myElement);
-
-    // listen to events...
-    mc.on("panleft", function(ev) {
-        plusDivs(1);
-    });
-    mc.on("panright", function(ev) {
-        plusDivs(-1);
-    });
+    // mobile pan event handler on slide
+    panSlides()
 });
 
+// show the first introduction slide
 function initialSlides() {
     $(".introduction-slide").hide();
     $(".introduction-slide").eq(0).show();
@@ -105,6 +96,22 @@ function showDivs(n) {
         slides.hide();
     }
     slides.eq(slideIndex - 1).css("display", "block");
+}
+
+// mobile pan event handler on slide
+function panSlides() {
+    var myElement = document.getElementById('introduction-slides');
+    // create a simple instance
+    // by default, it only adds horizontal recognizers
+    var mc = new Hammer(myElement);
+
+    // listen to events...
+    mc.on("panleft", function(ev) {
+        plusDivs(1);
+    });
+    mc.on("panright", function(ev) {
+        plusDivs(-1);
+    });
 }
 
 // language-switch-button dropup animation
