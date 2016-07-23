@@ -11,7 +11,6 @@ var isSlideUp = false;
 $(document).ready(function() {
     // language detect and render corresponding language
     renderLanguageText(relang);
-
     // Ludo logo move to top animation
     $('a.page-scroll-top').bind('click', function(event) {
         $('html, body').stop(true, false).animate({
@@ -129,15 +128,24 @@ $('.language-switch-button').bind('click', function(event) {
 // language switch click animation
 $('.language').bind('click', function(event) {
     var chosen_language = $(this).attr("value");
-    renderLanguageText(chosen_language);
     $('.language-switch-button').toggleClass('clicked');
     $('.language-switch-content').toggleClass('hidden');
-    $('html, body').stop(true, false).animate({
-        scrollTop: 0
-    }, 500, 'easeOutCubic');
+    // $('html, body').stop(true, false).animate({
+    //     scrollTop: 0
+    // }, 500, 'easeOutCubic');
+    renderLanguageText(chosen_language);
     initialSlides();
 });
 
+$('.en-us').bind('click', function(e) {
+    $('.typeform.zh-tw').addClass('hidden');
+    $('.typeform.en-us').removeClass('hidden');
+});
+
+$('.zh-tw').bind('click', function(e) {
+    $('.typeform.en-us').addClass('hidden');
+    $('.typeform.zh-tw').removeClass('hidden');
+});
 
 
 /* side nav */
