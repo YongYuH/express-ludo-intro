@@ -39,3 +39,7 @@ jspm_packages
 
 # Sass configuration
 config.rb
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
