@@ -555,15 +555,6 @@ img.introduction-slide {
 }
 
 /* line 60, ../../sass/components/_language-switch.scss */
-.language-switch-button.clicked {
-  background-image: url("../images/language_drop_down_button.png");
-  transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-}
-
-/* line 65, ../../sass/components/_language-switch.scss */
 .language-switch-button.clicked > .language-switch-arrow {
   transform: rotateX(180deg);
   -ms-transform: rotateX(180deg);
@@ -580,7 +571,7 @@ img.introduction-slide {
   -o-transition-duration: 0.5s;
 }
 
-/* line 70, ../../sass/components/_language-switch.scss */
+/* line 65, ../../sass/components/_language-switch.scss */
 .language-switch-button.clicked + .language-switch-content {
   transform: translateY(-98%);
   -ms-transform: translateY(-98%);
@@ -589,17 +580,17 @@ img.introduction-slide {
   -o-transform: translateY(-98%);
 }
 
-/* line 73, ../../sass/components/_language-switch.scss */
+/* line 68, ../../sass/components/_language-switch.scss */
 .language {
   padding-bottom: 1.5px;
 }
-/* line 77, ../../sass/components/_language-switch.scss */
+/* line 72, ../../sass/components/_language-switch.scss */
 .language:hover {
   border-radius: 2px;
   color: #fdd479;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 82, ../../sass/components/_language-switch.scss */
+/* line 77, ../../sass/components/_language-switch.scss */
 .language:active {
   border-radius: 2px;
   box-shadow: inset 0.5px 0.5px 0.5px #fdd479;

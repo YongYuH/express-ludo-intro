@@ -57,11 +57,6 @@
             font-size: $language-switch-content_font-size;
             background-color: $skin_color;
         }
-        .language-switch-button.clicked {
-            @include background_img_content(language_drop_down_button);
-            @include transition-duration(0.5s);
-
-        }
         .language-switch-button.clicked > .language-switch-arrow {
             @include rotateX(180deg);
             @include transition-timing-function(cubic-bezier(0.3, -0.3, 0.6, 1.8));
