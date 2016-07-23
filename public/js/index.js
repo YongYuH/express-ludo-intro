@@ -52,7 +52,13 @@ $(document).ready(function() {
     // initialize the slide 
     initialSlides();
     // mobile pan event handler on slide
-    panSlides()
+    panSlides();
+    $('.left-button').bind('click', function(event) {
+        plusDivs(-1);
+    });
+    $('.right-button').bind('click', function(event) {
+        plusDivs(1);
+    });
 });
 
 
