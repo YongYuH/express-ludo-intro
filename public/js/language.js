@@ -75,4 +75,7 @@ function renderLanguageText(language) {
         $("." + className).html(content);
     });
     $('.typeform.'+ language).removeClass('hidden');
+    $('html, body').stop(true, false).animate({
+        scrollTop: 0
+    }, 800, 'easeOutCubic');
 }
