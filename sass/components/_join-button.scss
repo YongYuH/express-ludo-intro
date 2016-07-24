@@ -1,0 +1,29 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/placeholders";
+
+.join-button {
+    width: $join-button_width;
+    height: $join-button_height;
+    border: solid;
+    border-color: $deep_blue;
+    border-width: $join-button_border-width;
+    padding: $join-button_padding;
+
+    @extend %text_center;
+    @extend %remove_text-decoration;
+    font-size: $join-button_font-size;
+}
+.join-button.btn {
+    // overwrite bootstrap button line-height
+    line-height: 1;
+    color: white;
+    background-color: $deep_blue;
+    @include transition-duration(0.2s);
+
+    &:hover {
+        color: $deep_blue;
+        background-color: white;
+        @include transition-duration(0.2s);
+    }
+}

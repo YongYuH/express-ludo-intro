@@ -3,6 +3,7 @@
 @import "helpers/placeholders";
 
 @import "components/slides-buttons";
+@import "components/introduction-slides";
 
 .introduction {
     @extend %relative;
@@ -20,8 +21,4 @@
             @extend %bold_font;
             font-size: $introduction-text-title_font-size;
             color: $black;
-        }
-        img.introduction-slide {
-            width: 60%;
-            @extend %margin_center_x;
         }

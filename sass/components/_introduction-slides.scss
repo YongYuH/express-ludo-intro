@@ -1,0 +1,12 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/placeholders";
+
+img.introduction-slide {
+    width: 60%;
+    @extend %margin_center_x;
+
+    @media screen and (max-width: $bt_md_width) {
+        width: 100%;
+    }
+}
