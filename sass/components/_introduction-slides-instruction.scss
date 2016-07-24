@@ -1,0 +1,21 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/placeholders";
+
+.introduction-slides-instruction {
+    @media only screen and (max-width: $bt_md_width) {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(180,180,180,0.3);
+        margin-left: 20%;
+        margin-right: 20%;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../images/left_swipe.png');
+    }
+}

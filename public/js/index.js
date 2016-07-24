@@ -44,6 +44,8 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
+
+
     // initialize the slide 
     initialSlides();
     // mobile pan event handler on slide
@@ -86,7 +88,7 @@ function showDivs(n) {
         left.hide();
         slideIndex = 1;
     } else {
-        if (screen_width > 768) {
+        if (screen_width > 992) {
             left.show();
             right.show();
         }
@@ -98,10 +100,16 @@ function showDivs(n) {
 }
 // mobile swipe event handler on slide
 function swipeSlides() {
-    var myElement = document.getElementById('introduction-slides');
+    var instruction = document.getElementById('introduction-slides-instruction');
+    var mc_i = new Hammer(instruction);
+    mc_i.on("swipeleft panleft tap", function(ev) {
+        $('.introduction-slides-instruction').css("display", "none");
+    });
+
+    var slides = document.getElementById('introduction-slides');
     // create a simple instance
     // by default, it only adds horizontal recognizers
-    var mc = new Hammer(myElement);
+    var mc = new Hammer(slides);
 
     // listen to events...
     mc.on("swipeleft", function(ev) {

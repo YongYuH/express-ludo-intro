@@ -2,6 +2,8 @@
 @import "helpers/variables";
 @import "helpers/placeholders";
 
+@import "components/introduction-slides-instruction";
+
 img.introduction-slide {
     width: 60%;
     @extend %margin_center_x;
