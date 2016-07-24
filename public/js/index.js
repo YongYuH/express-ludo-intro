@@ -29,15 +29,9 @@ $(document).ready(function() {
         var sectionPosition = $($anchor.attr('href')).offset().top;
         sectionPosition = Math.round(sectionPosition);
         var sectionPositionWithHeader = sectionPosition - headerHeight;
-        console.log('sectionPositionWithHeader', sectionPositionWithHeader);
-        console.log('headerHeight', headerHeight);
-        console.log('sectionPosition', sectionPosition);
         $('html,body').stop(true, false).animate({
             scrollTop: sectionPositionWithHeader
         }, 800, 'easeOutCubic');
-        console.log('sectionPositionWithHeader', sectionPositionWithHeader);
-        console.log('headerHeight', headerHeight);
-        console.log('sectionPosition', sectionPosition);
         event.preventDefault();
     });
 
