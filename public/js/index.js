@@ -100,18 +100,16 @@ function showDivs(n) {
 }
 // mobile swipe event handler on slide
 function swipeSlides() {
-    var instruction = document.getElementById('introduction-slides-instruction');
-    var mc_i = new Hammer(instruction);
-    mc_i.on("swipeleft panleft tap", function(ev) {
-        $('.introduction-slides-instruction').css("display", "none");
-    });
-
     var slides = document.getElementById('introduction-slides');
     // create a simple instance
     // by default, it only adds horizontal recognizers
     var mc = new Hammer(slides);
 
     // listen to events...
+    mc.on("swipeleft panleft tap", function(ev) {
+        $('.introduction-slides-instruction').css("display", "none");
+    });
+    
     mc.on("swipeleft", function(ev) {
         plusDivs(1);
     });
