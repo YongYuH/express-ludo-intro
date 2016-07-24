@@ -27,25 +27,26 @@ $(document).ready(function() {
         $(this).addClass("active");
         var $anchor = $(this);
         var sectionPosition = $($anchor.attr('href')).offset().top;
+        sectionPosition = Math.round(sectionPosition);
         var sectionPositionWithHeader = sectionPosition - headerHeight;
-        $('html, body').stop(true, false).animate({
+        console.log('sectionPositionWithHeader', sectionPositionWithHeader);
+        console.log('headerHeight', headerHeight);
+        console.log('sectionPosition', sectionPosition);
+        $('html,body').stop(true, false).animate({
             scrollTop: sectionPositionWithHeader
         }, 800, 'easeOutCubic');
+        console.log('sectionPositionWithHeader', sectionPositionWithHeader);
+        console.log('headerHeight', headerHeight);
+        console.log('sectionPosition', sectionPosition);
         event.preventDefault();
     });
 
     // Join us button link to form animation
-    $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        }
+    $('.join-button').click(function() {
+        var form_height = $('#form').offset().top;
+        $('html,body').stop(true, false).animate({
+            scrollTop: form_height
+        }, 800);
     });
 
     // initialize the slide 
