@@ -36,11 +36,12 @@ $(document).ready(function() {
     });
 
     // Join us button link to form animation
-    $('.join-button').click(function() {
+    $('.join-button').bind('click', function(event) {
         var form_height = $('#form').offset().top;
         $('html,body').stop(true, false).animate({
             scrollTop: form_height
         }, 800);
+        event.preventDefault();
     });
 
     // initialize the slide 
