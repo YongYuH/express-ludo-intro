@@ -5,6 +5,7 @@
 div.slides-buttons {
     @extend %clickable;
     @extend %absolute;
+    display: inline-block;
     top: 46%;
     width: 100px;
     height: 100px;
@@ -15,7 +16,7 @@ div.slides-buttons {
     transition: 0.1s;
     transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
     @extend %noselect;
-    @media screen and (max-width: $button_block_slides_width) {
+    @media screen and (max-width: $bt_md_width) {
         display: none;
     }
     &:hover {
@@ -25,9 +26,9 @@ div.slides-buttons {
         transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
     }
 }
-.left-button {
-    left: 160px;
+div.left-button {
+    left: 130px;
 }
-.right-button {
-    right: 160px;
+div.right-button {
+    right: 130px;
 }

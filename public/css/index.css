@@ -338,6 +338,7 @@ body {
 
 /* line 5, ../../sass/components/_slides-buttons.scss */
 div.slides-buttons {
+  display: inline-block;
   top: 46%;
   width: 100px;
   height: 100px;
@@ -346,13 +347,13 @@ div.slides-buttons {
   transition: 0.1s;
   transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
 }
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 992px) {
   /* line 5, ../../sass/components/_slides-buttons.scss */
   div.slides-buttons {
     display: none;
   }
 }
-/* line 21, ../../sass/components/_slides-buttons.scss */
+/* line 22, ../../sass/components/_slides-buttons.scss */
 div.slides-buttons:hover {
   border: 3px solid #505050;
   transform: scale(1.11);
@@ -360,14 +361,14 @@ div.slides-buttons:hover {
   transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
 }
 
-/* line 28, ../../sass/components/_slides-buttons.scss */
-.left-button {
-  left: 160px;
+/* line 29, ../../sass/components/_slides-buttons.scss */
+div.left-button {
+  left: 130px;
 }
 
-/* line 31, ../../sass/components/_slides-buttons.scss */
-.right-button {
-  right: 160px;
+/* line 32, ../../sass/components/_slides-buttons.scss */
+div.right-button {
+  right: 130px;
 }
 
 /* line 5, ../../sass/components/_introduction-slides.scss */
