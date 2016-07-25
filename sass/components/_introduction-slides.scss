@@ -4,11 +4,12 @@
 
 @import "components/introduction-slides-instruction";
 
-img.introduction-slide {
+img.desktop-introduction-slide {
     width: 60%;
     @extend %margin_center_x;
+}
 
-    @media screen and (max-width: $bt_md_width) {
-        width: 100%;
-    }
+img.mobile-introduction-slide {
+    @extend %as_wide_as_parent;
+    @extend %margin_center_x;
 }

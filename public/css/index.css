@@ -83,7 +83,7 @@ table {
 }
 
 /* line 14, ../../sass/helpers/_placeholders.scss */
-.header, .header-logo-shadow, .join, .introduction, .core, .form, .language-switch-button, .language-switch-content {
+.header, .header-logo-shadow, .join, img.mobile-introduction-slide, .introduction, .core, .form, .language-switch-button, .language-switch-content {
   width: 100%;
 }
 
@@ -103,7 +103,7 @@ table {
 }
 
 /* line 23, ../../sass/helpers/_placeholders.scss */
-.header-logo-div, img.introduction-slide, .arrows-div {
+.header-logo-div, img.desktop-introduction-slide, img.mobile-introduction-slide, .arrows-div {
   margin: 0 auto;
 }
 
@@ -375,7 +375,6 @@ div.right-button {
   /* line 5, ../../sass/components/_introduction-slides-instruction.scss */
   .introduction-slides-instruction {
     position: absolute;
-    z-index: 3;
     top: 50%;
     width: 100px;
     height: 100px;
@@ -391,14 +390,8 @@ div.right-button {
 }
 
 /* line 7, ../../sass/components/_introduction-slides.scss */
-img.introduction-slide {
+img.desktop-introduction-slide {
   width: 60%;
-}
-@media screen and (max-width: 992px) {
-  /* line 7, ../../sass/components/_introduction-slides.scss */
-  img.introduction-slide {
-    width: 100%;
-  }
 }
 
 /* line 14, ../../sass/layout/_introduction.scss */

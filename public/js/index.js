@@ -7,6 +7,7 @@ var relang = lang.toLowerCase();
 // introduction slide
 var slideIndex = 1;
 var isSlideUp = false;
+var screen_width = screen.width;
 
 $(document).ready(function() {
     // language detect and render corresponding language
@@ -63,9 +64,14 @@ $(document).ready(function() {
 /* slides */
 // show the first introduction slide
 function initialSlides() {
-    $(".introduction-slide").hide();
-    $(".introduction-slide").eq(0).show();
-    $('.left-button').hide();
+    $(".desktop-introduction-slide").hide();
+    $(".mobile-introduction-slide").hide();
+    if (screen_width < 768) { // mobile divice
+        $(".mobile-introduction-slide").eq(0).show();
+    } else {
+        $(".desktop-introduction-slide").eq(0).show();
+        $('.left-button').hide();
+    }
     slideIndex = 1;
 }
 // introduction slide animation
@@ -75,9 +81,13 @@ function plusDivs(n) {
 // introduction slide animation
 function showDivs(n) {
     var i;
-    var slides = $(".introduction-slide");
-    var screen_width = screen.width;
-    size_of_slides = $(".introduction-slides").length;
+    var slides;
+    if (screen_width < 768) { // mobile divice
+        slides = $(".mobile-introduction-slide");
+    } else {
+        slides = $(".desktop-introduction-slide");
+    }
+    size_of_slides = $(".desktop-introduction-slides").length;
     var cur_slide;
     var left = $('.left-button');
     var right = $('.right-button');
@@ -100,10 +110,10 @@ function showDivs(n) {
 }
 // mobile swipe event handler on slide
 function swipeSlides() {
-    var slides = document.getElementById('introduction-slides');
+    introduction_slides = document.getElementById('introduction-slides');
     // create a simple instance
     // by default, it only adds horizontal recognizers
-    var mc = new Hammer(slides);
+    var mc = new Hammer(introduction_slides);
 
     // listen to events...
     mc.on("swipeleft panleft tap", function(ev) {
