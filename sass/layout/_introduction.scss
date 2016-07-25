@@ -10,15 +10,14 @@
     @extend %header_height_offset;
     @extend %as_wide_as_parent;
     @extend %text_center;
+    @extend %padding_x;
+    padding-top: $introduction_padding_y;
+    padding-bottom: $introduction_padding_y;
 }
-    .introduction-content {
-        @extend %padding_x;
-        padding: $introduction_padding_y;
+    .introduction-title {
+        padding-bottom: $introduction-title_padding_y;
+        @extend %bold_font;
         line-height: $introduction-text_line-height;
+        font-size: $introduction-text-title_font-size;
+        color: $black;
     }
-        .introduction-title {
-            padding-bottom: $introduction-text-title_padding-bottom;
-            @extend %bold_font;
-            font-size: $introduction-text-title_font-size;
-            color: $black;
-        }

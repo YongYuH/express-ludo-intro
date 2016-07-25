@@ -113,7 +113,7 @@ table {
 }
 
 /* line 29, ../../sass/helpers/_placeholders.scss */
-.introduction-content, .desktop-form-text, .mobile-form-text, .typeform-div {
+.introduction, .desktop-form-text, .mobile-form-text, .typeform-div {
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -373,15 +373,23 @@ div.right-button {
 
 @media only screen and (max-width: 992px) {
   /* line 5, ../../sass/components/_introduction-slides-instruction.scss */
-  .introduction-slides-instruction {
+  .introduction-slides-instruction-div {
     position: absolute;
     top: 50%;
+    left: 37%;
+    width: 25%;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  /* line 15, ../../sass/components/_introduction-slides-instruction.scss */
+  .introduction-slides-instruction {
     width: 100px;
     height: 100px;
-    background-color: rgba(180, 180, 180, 0.3);
-    margin-left: 20%;
-    margin-right: 20%;
+    margin: 0 auto;
     border-radius: 50%;
+    background-color: rgba(180, 180, 180, 0.3);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -394,15 +402,16 @@ img.desktop-introduction-slide {
   width: 60%;
 }
 
-/* line 14, ../../sass/layout/_introduction.scss */
-.introduction-content {
-  padding: 40px;
-  line-height: 1.2;
+/* line 8, ../../sass/layout/_introduction.scss */
+.introduction {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-/* line 19, ../../sass/layout/_introduction.scss */
+/* line 17, ../../sass/layout/_introduction.scss */
 .introduction-title {
   padding-bottom: 20px;
+  line-height: 1.2;
   font-size: 30px;
   color: rgba(0, 0, 0, 0.8);
 }
