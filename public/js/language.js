@@ -6,6 +6,7 @@ var html_text_object = {
         "join-button": "Join Us",
         "introduction-title": "Why we need Ludo",
         "introduction-slides": '<img class="introduction-slide" src="./images/introduction_en1.png"></img> <img class="introduction-slide" src="./images/introduction_en2.png"></img> <img class="introduction-slide" src="./images/introduction_en3.png"></img> <img class="introduction-slide" src="./images/introduction_en4.png"></img> <img class="introduction-slide" src="./images/introduction_en5.png"></img> <img class="introduction-slide" src="./images/introduction_en6.png"></img> <img class="introduction-slide" src="./images/introduction_en7.png"></img> <img class="introduction-slide" src="./images/introduction_en8.png"></img> <img class="introduction-slide" src="./images/introduction_en9.png"></img> <img class="introduction-slide" src="./images/introduction_en10.png"></img>',
+        "game-text-title": "GAME",
         "game-text-content": "Simple interface<br>including<br>report, game ,and time,<br>you can start easy<br>like play video GAME.",
         "social-text-title": "SOCIAL",
         "social-text-content": "Find the right Ludor<br>quickly through<br>photograph icon<br>and language basic<br>MATCH SYSTEM.",
