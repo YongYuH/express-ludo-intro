@@ -344,6 +344,7 @@ div.slides-buttons {
   height: 100px;
   font-size: 75px;
   border: 3px solid #fff;
+  padding-top: 5.5px;
   transition: 0.1s;
   transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
 }
@@ -353,7 +354,7 @@ div.slides-buttons {
     display: none;
   }
 }
-/* line 22, ../../sass/components/_slides-buttons.scss */
+/* line 23, ../../sass/components/_slides-buttons.scss */
 div.slides-buttons:hover {
   border: 3px solid #505050;
   transform: scale(1.11);
@@ -361,12 +362,12 @@ div.slides-buttons:hover {
   transition-timing-function: cubic-bezier(0.51, -0.65, 0.63, 1.57);
 }
 
-/* line 29, ../../sass/components/_slides-buttons.scss */
+/* line 30, ../../sass/components/_slides-buttons.scss */
 div.left-button {
   left: 130px;
 }
 
-/* line 32, ../../sass/components/_slides-buttons.scss */
+/* line 33, ../../sass/components/_slides-buttons.scss */
 div.right-button {
   right: 130px;
 }
