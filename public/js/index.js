@@ -71,6 +71,7 @@ function initialSlides() {
     } else {
         $(".desktop-introduction-slide").eq(0).show();
         $('.left-button').hide();
+        $('.right-button').show();
     }
     slideIndex = 1;
 }
