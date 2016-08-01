@@ -8,6 +8,7 @@ var relang = lang.toLowerCase();
 var slideIndex = 1;
 var isSlideUp = false;
 var screen_width = screen.width;
+var autoplay = 0;
 
 $(document).ready(function() {
     // language detect and render corresponding language
@@ -46,17 +47,20 @@ $(document).ready(function() {
     });
 
 
-
     // initialize the slide 
     initialSlides();
     // mobile pan event handler on slide
     swipeSlides();
     $('.left-button').bind('click', function(event) {
         plusDivs(-1);
+        clearInterval(autoplay);
     });
     $('.right-button').bind('click', function(event) {
         plusDivs(1);
+        clearInterval(autoplay);
     });
+
+    autoplay = setInterval(function(){ plusDivs(1); }, 2200);
 });
 
 
@@ -123,9 +127,11 @@ function swipeSlides() {
     
     mc.on("swipeleft", function(ev) {
         plusDivs(1);
+        clearInterval(autoplay);
     });
     mc.on("swiperight", function(ev) {
         plusDivs(-1);
+        clearInterval(autoplay);
     });
 }
 
