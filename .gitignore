@@ -39,3 +39,6 @@ jspm_packages
 
 # Sass configuration
 config.rb
+
+#mac DS_Store
+.DS_Store
