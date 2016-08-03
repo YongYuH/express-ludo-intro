@@ -9,7 +9,7 @@
     @extend %as_wide_as_parent;
     @extend %text_center;
     background-color: $orange;
-    color: $smoke_white;
+    color: rgba(60, 60, 60, 1);
 }
     .desktop-form-text, .mobile-form-text {
         @extend %padding_x;
