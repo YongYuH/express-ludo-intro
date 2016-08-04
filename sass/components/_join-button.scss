@@ -15,8 +15,8 @@
     font-size: $join-button_font-size;
 }
 .join-button.btn {
-    // overwrite bootstrap button line-height
-    line-height: 1;
+    // overwrite bootstrap button style
+    @extend %relative;
     color: white;
     background-color: $deep_blue;
     @include transition-duration(0.2s);
@@ -27,3 +27,10 @@
         @include transition-duration(0.2s);
     }
 }
+
+    .join-button__text {
+        @extend %absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }

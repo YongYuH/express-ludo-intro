@@ -63,12 +63,12 @@ table {
 }
 
 /* line 5, ../../sass/helpers/_placeholders.scss */
-.side-nav .side-nav-buttons, .side-nav .side-nav-button-center, div.slides-buttons, .language-switch, .language-switch-button, .language-switch-arrow {
+.side-nav .side-nav-buttons, .side-nav .side-nav-button-center, .join-button__text, div.slides-buttons, .language-switch, .language-switch-button, .language-switch-arrow {
   position: absolute;
 }
 
 /* line 6, ../../sass/helpers/_placeholders.scss */
-.header-logo-div, .header-logo, .header-logo-shadow, .side-nav .side-nav-button, .join, .join-img, .introduction, .core, .game-text, .social-text, .expert-text, .game-img, .social-img, .expert-img, .form, .contact-us {
+.header-logo-div, .header-logo, .header-logo-shadow, .side-nav .side-nav-button, .join-button.btn, .join, .join-img, .introduction, .core, .game-text, .social-text, .expert-text, .game-img, .social-img, .expert-img, .form, .contact-us {
   position: relative;
 }
 
@@ -273,7 +273,6 @@ body {
 
 /* line 17, ../../sass/components/_join-button.scss */
 .join-button.btn {
-  line-height: 1;
   color: white;
   background-color: #0a3f70;
   transition-duration: 0.2s;
@@ -289,6 +288,13 @@ body {
   -moz-transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
+}
+
+/* line 31, ../../sass/components/_join-button.scss */
+.join-button__text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* line 7, ../../sass/layout/_join.scss */
