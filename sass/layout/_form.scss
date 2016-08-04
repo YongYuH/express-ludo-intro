@@ -1,11 +1,10 @@
-@import "helpers/mixins";
 @import "helpers/variables";
 @import "helpers/placeholders";
 
 .form {
     @extend %relative;
     @extend %header_height_offset;
-    height: $form_page_height;
+    height: 750px;
     @extend %as_wide_as_parent;
     @extend %text_center;
     background-color: $orange;
@@ -13,17 +12,14 @@
 }
     .desktop-form-text, .mobile-form-text {
         @extend %padding_x;
-        padding-top: $form-text_padding_y;
-        padding-bottom: $form-text_padding_y;
-        line-height: $form-text_line-height;
-        @media screen and (min-width: $bt_xs_width) {
-            font-size: $form-text_font-size_desktop;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        line-height: 1.3;
+        @media screen and (min-width: $bt_md_width) {
+            font-size: 24px;
         }
-        @media screen and (max-width: $bt_xs_width) {
-            font-size: $form-text_font-size_mobile;
-        }
-        .fill_in {
-            color: white;
+        @media screen and (max-width: $bt_md_width) {
+            font-size: 18px;
         }
     }
     .arrows-div {
